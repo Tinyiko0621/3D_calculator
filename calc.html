@@ -31,6 +31,7 @@
             <button onclick="digitBtnPressed(2)" class="btn">2</button>
             <button onclick="digitBtnPressed(3)" class="btn">3</button>
             <button onclick="digitBtnPressed(0)" class="btn zero">0</button>
+            <button onclick="btnDelPressed()" class="btn">Del</button>
         </div>
     </div>
 
@@ -85,6 +86,18 @@
         }
         value1 = 0;
         newLine = true;
+
+        function btnDelPressed() {
+            let inputBox = document.getElementById("inputBox");
+            let currentValue = inputBox.value;
+
+            if (currentValue.length > 1) {
+                inputBox.value = currentValue.slice(0, -1);
+            } else {
+                inputBox.value = "0";
+                newLine = true;
+            }
+        }
     </script>
 
 </body>
