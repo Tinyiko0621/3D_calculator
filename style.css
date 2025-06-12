@@ -76,3 +76,8 @@ body {
 .zero {
     grid-column: span 2;
 }
+
+.delButton {
+    background-color: #607d8b;
+    color: white;
+}
